@@ -3,13 +3,13 @@ import static dependencies.DependenciesKt.*
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: "com.github.ben-manes.versions"
+apply plugin: 'kotlin-kapt'
 
 android {
   compileSdkVersion COMPILE_SDK
 
   defaultConfig {
-    applicationId "com.github.satoshun.example.androidx.preference"
+    applicationId "com.github.satoshun.example"
     minSdkVersion MIN_SDK
     targetSdkVersion TARGET_SDK
     versionCode 1
@@ -25,15 +25,16 @@ android {
 }
 
 dependencies {
-  implementation project(':common')
-
-  implementation RECOMMENDATION
-
   implementation KOTLIN
 
   implementation MATERIAL
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT
+
+  implementation "com.google.dagger:dagger:HEAD-SNAPSHOT"
+  kapt 'com.google.dagger:dagger-compiler:HEAD-SNAPSHOT'
+  implementation "com.google.dagger:dagger-android:HEAD-SNAPSHOT"
+  kapt "com.google.dagger:dagger-android-processor:HEAD-SNAPSHOT"
 
   testImplementation JUNIT
 
