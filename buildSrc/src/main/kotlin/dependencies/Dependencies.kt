@@ -75,6 +75,13 @@ const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
+private const val VDAGGER = "2.22.1"
+const val DAGGER_RUNTIME = "com.google.dagger:dagger:$VDAGGER"
+const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
+const val DAGGER_ANDROID_RUNTIME = "com.google.dagger:dagger-android:$VDAGGER"
+const val DAGGER_ANDROID_COMPILER = "com.google.dagger:dagger-android-processor:$VDAGGER"
+const val DAGGER_ANDROID_SUPPORT_RUNTIME = "com.google.dagger:dagger-android-support:$VDAGGER"
+
 const val JUNIT = "junit:junit:4.13-beta-1"
 const val TRUTH = "com.google.truth:truth:0.42"
 const val MOCKITO_KOTLIN = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"

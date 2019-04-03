@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
   //  @Inject lateinit var presenter: ArticlePresenter
-  lateinit var presenter: ArticlePresenter
+  private lateinit var presenter: ArticlePresenter
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
