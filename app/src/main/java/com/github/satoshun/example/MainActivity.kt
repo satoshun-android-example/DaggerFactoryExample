@@ -11,18 +11,16 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
 
-    val component = DaggerAppComponent.factory().create(
-      AppModule("sato"),
-      10
-    )
+    val factory = DaggerAppComponent.factory()
+    presenter = factory.createPresenter("sato", 50)
 
 //    val component = DaggerAppComponent
 //      .builder()
 //      .setAppModule(AppModule("sato"))
-//      .bindInt(10)
+//      .bindInt(50)
 //      .build()
+//    presenter = component.presenter
 
-    presenter = component.presenter
     println(presenter)
 
 //    inject()

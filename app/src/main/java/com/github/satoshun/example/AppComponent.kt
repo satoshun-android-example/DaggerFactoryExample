@@ -13,7 +13,7 @@ interface AppComponent {
   interface Factory {
     fun create(
       app: AppModule,
-      @BindsInstance i: Int
+      @BindsInstance age: Int
     ): AppComponent
   }
 
@@ -23,6 +23,13 @@ interface AppComponent {
 //    @BindsInstance fun bindInt(i: Int): Builder
 //    fun build(): AppComponent
 //  }
+}
+
+fun AppComponent.Factory.createPresenter(
+  name: String,
+  age: Int
+): ArticlePresenter {
+  return create(AppModule(name), age).presenter
 }
 
 @Module
